@@ -1,0 +1,18 @@
+<pretty-config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://ocpsoft.org/prettyfaces/3.3.3" >
+
+    <url-mapping id="index" >
+        <pattern value="/index" />
+        <view-id value="/index.jsf" />
+    </url-mapping>
+    
+     <url-mapping id="bar" >
+        <pattern value="/bar" />
+        <view-id value="/bar.jsf" />
+    </url-mapping>
+    <url-mapping id="404" >
+        <pattern value="/404" />
+        <view-id value="/404.jsf" />
+    </url-mapping>
+
+</pretty-config>

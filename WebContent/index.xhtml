@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pm="http://primefaces.org/mobile"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+</h:head>
+<h:body>
+	<p:fieldset legend="gyro right">
+		<h:form>
+				<h:outputText value="power" /> <br/>
+				<p:inputText id="txt2" value="#{misterBean.gyroRightPower}" />
+				<p:slider for="txt2" maxValue="255" /> <br/><br/>
+				<p:commandButton value="send" actionListener="#{misterBean.sendGyroRightCommand}"></p:commandButton>
+		</h:form>
+	</p:fieldset>
+
+	<p:fieldset legend="gyro links">
+		<h:form>
+				<h:outputText value="power" /> <br />
+				<p:inputText id="txt2" value="#{misterBean.gyroLeftPower}" />
+				<p:slider for="txt2" maxValue="255" /> <br /><br />
+				<p:commandButton value="send" actionListener="#{misterBean.sendGyroLeftCommand}"></p:commandButton>
+		</h:form>
+	</p:fieldset>
+
+	<p:fieldset legend="power command">
+		<h:form>
+				<h:outputText value="relatieve snelheid" /> <br />
+				<p:inputText id="txt3" value="#{misterBean.gyroPowerSnelheid}" />
+				<p:slider for="txt3" maxValue="255" /><br /><br />
+				<p:commandButton value="send" actionListener="#{misterBean.sendGyroPowerCommand}"></p:commandButton>
+		</h:form>
+	</p:fieldset>
+
+	<p:fieldset legend="gyro startup">
+		<h:form>
+				<h:outputText value="relatieve snelheid na tarten" /> <br />
+				<p:inputText id="txt2" value="#{misterBean.gyroStartupRelatieveSnelheid}" /> 
+				<p:slider for="txt2" maxValue="255" /> <br /><br />
+				<p:commandButton value="send" actionListener="#{misterBean.sendGyroStartupCommand}"></p:commandButton>
+		</h:form>
+	</p:fieldset>
+
+	<p:fieldset legend="shutdown command">
+		<h:form>
+				<p:commandButton value="send" actionListener="#{misterBean.sendShutdownCommand}"></p:commandButton> <br />
+		</h:form>
+	</p:fieldset>
+	
+	<p:fieldset legend="Wiggle command">
+		<h:form>
+				<h:outputText value="aantal wiebelen" /> <br />
+				<p:inputText id="txt5" value="#{misterBean.gyroWiggleAantal}" />
+				<p:slider for="txt5" maxValue="255" /> <br /><br />
+				<h:outputText value="intensitiet" /> <br />
+				<p:inputText id="txt6" value="#{misterBean.gyroWiggleIntensity}" />
+				<p:slider for="txt6" maxValue="255" /> <br /><br />
+				<p:commandButton value="send" actionListener="#{misterBean.sendWiggleCommand}"></p:commandButton>
+		</h:form>
+	</p:fieldset>
+	
+	<p:fieldset legend="bubble rechts command">
+		<h:form>
+				<h:outputText value="duur" /> <br />
+				<p:inputText id="txt5" value="#{misterBean.gyroBubbleRechtsDuur}" />
+				<p:slider for="txt5" maxValue="255" /> <br /><br />
+				<h:outputText value="intensitiet" /> <br />
+				<p:inputText id="txt6" value="#{misterBean.gyroBubbleRechtsIntensity}" />
+				<p:slider for="txt6" maxValue="255" /> <br /><br />
+				<h:outputText value="hoogtepunt" /> <br />
+				<p:inputText id="txt7" value="#{misterBean.gyroBubbleRechtsHoogtepunt}" /> 
+				<p:slider for="txt7" maxValue="255" /> <br /><br />
+				<p:commandButton value="send" actionListener="#{misterBean.sendBubbleRechtsCommand}"></p:commandButton>
+		</h:form>
+	</p:fieldset>
+	
+	<p:fieldset legend="bubble links command">
+		<h:form>
+				<h:outputText value="duur" /> <br />
+				<p:inputText id="txt5" value="#{misterBean.gyroBubbleLinksDuur}" />
+				<p:slider for="txt5" maxValue="255" /> <br /><br />
+				<h:outputText value="intensitiet" /> <br />
+				<p:inputText id="txt6" value="#{misterBean.gyroBubbleLinksIntensity}" />
+				<p:slider for="txt6" maxValue="255" /> <br /><br />
+				<h:outputText value="Hoogtepunt"/><br />
+				<p:inputText id="txt7" value="#{misterBean.gyroBubbleLinksHoogtepunt}" />
+				<p:slider for="txt7" maxValue="255" /> <br /><br />
+				<p:commandButton value="send" actionListener="#{misterBean.sendBubbleLinksCommand}"></p:commandButton>
+		</h:form>
+	</p:fieldset>
+</h:body>
+</html>
